@@ -29,7 +29,6 @@ In this example, we have an interface called SortAlgorithm that owns a method, c
 public class ComplexAlgorithm {
   @Autowired
   private SortAlgorithm sortAlgorithm;
-
 }
 
 ``` 
@@ -92,18 +91,18 @@ ViewResolver
 	- No need for @ComponentScan.
 	- No need to configure DispatcherServlet, Data Source, Entity Manager Factory ot Transaction Manager
 
-##Auto Configuration
+## Auto Configuration
 	
 Based on frameworks available on CLASSPATH and existing configuration on the application, Spring Boot provides the application with the basic configuration necessary. It's implemented on spring-boot-autoconfigure.jar. It holds all configuration for the Spring project to run.
 To get more details, turn on Debug logging or use Spring Boot Actuator
 
-##@SpringBootAplication
+## @SpringBootAplication
 
 On the top of all spring boot class should be an @SpringBootAplication anotation 
 
 This anotation provides @SpringBootConfiguration, @EnableAutoConfiguration and @ComponentScan
 
-##Embedded Servers
+## Embedded Servers
 
 In order to run a web application, before Spring Boot, it was necessary install a server, such as TomCat, on the deployment environment before start programming. Spring Boot provides an Embedded Server, which means that the server is embedded as part of the deployable jar. The default embedded server in Spring Boot is TomCat. It also supports Jetty and UnderTow.
 
