@@ -72,6 +72,39 @@ Dependency injection is a programming technique that makes a class independent o
 
 Inversion of control is a software design principle that asserts a program can benefit in terms of pluggability, testability, usability and loose coupling if the management of an application's flow is transferred to a different part of the application.
 
+### Important Roles of an IOC Container
+
+The three essential roles of an IOC Container are _finding beans_, _wire dependencies_ and _manage beans' life cycle_
+
+Application Context can be created using @Configuration anotation. Along side the basic roles of an IOC Container, it provides Spring AOP features, I18n capabilities, WebApplicationContext for web application. If you want to save memory, instead of using Application Context, you can use _Bean Factory_, the simplest tool Spring provides. It enables you to use only all three essential roles of an IOC Container. 
+
+```java
+@Configuration
+class SpringCOntext {
+}
+
+ApplicationContext = context =
+ new AnnotationConfigApplicationContext(SpringContext.class);
+);
+``` 
+
+The other way of adding Application Context is using XML. To create an application context, you can use ClassPathXmlApplicationContext
+
+```java
+ApplicationContext = context =
+ new ClassPathXmlApplicationContext(
+ new String[] {"BusinessApplicationContext.xml", "Other-Configuration.xml"}
+);
+``` 
+We can also create Application Contextss on Unit Tests using SpringJUnit4ClassRunner
+
+
+```java
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(classes = JavaTestContext.class)
+publica class DependencyInjectionJavaContextRxamples {
+``` 
+
 ## Main features Spring
 
 - Dependency Injection
@@ -168,3 +201,4 @@ spring documentation - interface used to indicate that a bean should run when it
 # @Bean
 
 [ARTICLE](https://www.devmedia.com.br/introducao-aos-javabeans/8621)
+
