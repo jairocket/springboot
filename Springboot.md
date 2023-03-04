@@ -57,7 +57,7 @@ public class BubbleSortAlgorithm implements SortAlgorithm {
 
 Whenever a class A uses another class or interface B, then A depends on B. A cannot carry out its work without B, and A cannot be reused without also reusing B. In such a situation the class A is called the "dependant" and the class or interface B is called the "dependency". A dependant depends on its dependencies.
 
-[Dependencies](https://www.markdownguide.org/extended-syntax/)
+[Dependencies](https://jenkov.com/tutorials/ood/understanding-dependencies.html)
 
 
 ## Dependency Injection 
@@ -78,7 +78,7 @@ Inversion of control is a software design principle that asserts a program can b
 - Resolves Duplication/Plumbing Code
 - Good Integration with Other Frameworks
 
-#Spring MVC
+# Spring MVC
 
 Provides decoupled way of developing web applications.
 Dispatcher Servlet
@@ -156,8 +156,15 @@ Just by adding spring-boot-starter-actuator dependency, the app starts being mon
 
 spring documentation - interface used to indicate that a bean should run when it is contained within a Spring Application
 
-Maven x Graddle?
+# Maven x Graddle
 
-@ConfigurationProperties?
+[Comparison](https://www.geeksforgeeks.org/difference-between-gradle-and-maven/)
 
-@Bean?
+# @ConfigurationProperties
+
+
+[ARTICLE](https://www.baeldung.com/configuration-properties-in-spring-boot)
+
+# @Bean
+
+[ARTICLE](https://www.devmedia.com.br/introducao-aos-javabeans/8621)
