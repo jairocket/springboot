@@ -1,6 +1,6 @@
-#Spring 
+# Spring 
 
-##Loose Coupling vs Tight Coupling
+## Loose Coupling vs Tight Coupling
 
 Loosing coupling enables the system components to work independently. It provides maintainability, extensibility, scalability and makes the entire framework more stable. In this scenario, it makes possible to modify code without shuttering it. It reduces the dependency between components and decreases the risk of breaking changes.
 
@@ -54,17 +54,30 @@ public class BubbleSortAlgorithm implements SortAlgorithm {
 
 ``` 
 
-Dependencies
+## Dependencies
 
-Dependency Injection - We use Spring Frameworj to instantiate beans and wire dependencies
+Whenever a class A uses another class or interface B, then A depends on B. A cannot carry out its work without B, and A cannot be reused without also reusing B. In such a situation the class A is called the "dependant" and the class or interface B is called the "dependency". A dependant depends on its dependencies.
 
-Inversion of control
+[Dependencies](https://www.markdownguide.org/extended-syntax/)
 
-Autowired
 
-Dependency Injection
-Resolves Duplication/Plumbing Code
-Good Integration with Other Frameworks
+## Dependency Injection 
+
+Dependency injection is a programming technique that makes a class independent of its dependencies. It achieves that by decoupling the usage of an object from its creation. 
+
+### Autowired
+
+ (@Autowired) is an anotation used for dependency injection. It indicates where the dependency should be injected. It works on methods, constructors and attributes. It can only be used once per constructor
+
+## Inversion of control
+
+Inversion of control is a software design principle that asserts a program can benefit in terms of pluggability, testability, usability and loose coupling if the management of an application's flow is transferred to a different part of the application.
+
+## Main features Spring
+
+- Dependency Injection
+- Resolves Duplication/Plumbing Code
+- Good Integration with Other Frameworks
 
 #Spring MVC
 
@@ -73,7 +86,7 @@ Dispatcher Servlet
 ModelAndView
 ViewResolver
 
-#Spring Boot
+# Spring Boot
 
 - Eliminates all configuration needed by Spring and Spring MVC and auto configures it
 	- No need for @ComponentScan.
