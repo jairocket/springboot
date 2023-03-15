@@ -102,7 +102,7 @@ We can also create Application Contextss on Unit Tests using SpringJUnit4ClassRu
 ```java
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = JavaTestContext.class)
-publica class DependencyInjectionJavaContextRxamples {
+public class DependencyInjectionJavaContextRxamples {
 ``` 
 
 ## Main features Spring
@@ -201,4 +201,39 @@ spring documentation - interface used to indicate that a bean should run when it
 # @Bean
 
 [ARTICLE](https://www.devmedia.com.br/introducao-aos-javabeans/8621)
+
+## Component Scan
+
+Spring searches for components that we use. In order to inform Spring where it can find those components, in Java COnfiguration it`s necessary to set component scan like this:
+
+```java
+@Configuration
+@ComponentScan(basePackages = {
+  "com.in28minutes.spring.example1.businessservice",
+  "com.in28minutes.spring.example1.dataservice.stup" 
+})
+```
+You can also configure it using XML
+
+# @Component vs @Autowired
+
+- *@Component* - Spring should manage the bean.
+- *@Autowired* - Spring should find the matching bean and wire the dependency in.
+
+# @Component vs @Autowired vs @Service vs @Controller
+
+- *@Component* - Generic component. (web layer)
+- *@Repository* - encapsulating storage, retrieval, and search behaviour typically from a relational database (data layer)
+- *@Service* - Business Service Facade (business layer)
+- *@controller - Controller in MVC pattern
+
+# Bean Scopes
+
+- *singleton* - One instance per Spring Context. That's the default scope on Spring
+- *prototype* - new bean whenever requested
+- *request* - One bean per HTTP request. Web-aware Spring ApplicationContext.
+- *session* - one bean per HTTP session. Web-aware Spring ApplicationContext.
+
+Beans are not thread safe by default because if on a singleton there is one bean for all threads running.
+Gang of Four design pattern defines Singleton as having one instance per ClassLoader. However, Spring singleton is defined as one instance of bean definition per container.
 
